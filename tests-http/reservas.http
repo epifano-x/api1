@@ -1,0 +1,21 @@
+@URL=http://localhost:8081
+@token = Bearer eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNzAwNjI3ODY4LCJleHAiOjE3MDA2MzE0NjgsImlzcyI6IlVURlBSIn0
+
+### Obter todas pessoas
+GET {{URL}}/pessoa
+Authorization: {{token}}
+
+### obtem todas as pessoas
+GET {{URL}}/pessoa
+
+### cadastra uma pessoa
+POST {{URL}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "mediaqwasdneira1",
+    "email": "bruno1@bruno.com",
+    "password": "abc",
+    "nascimento": "2022-10-31T09:00:00Z",
+    "perfil": "CLIENTE"
+}

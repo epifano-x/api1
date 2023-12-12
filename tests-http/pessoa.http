@@ -1,0 +1,129 @@
+@URL=http://localhost:8081
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjUxZGUxMjMyLTkzNjgtNDM1Ni1iZTVhLTEwNDI4NGYzOGQ1NiIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEyNzc1MzIsImV4cCI6MTcwMTI4MTEzMiwiaXNzIjoiVVRGUFIifQ.ENPSaalTc84jYHh6gms07r_DjpkIjZ_RVeO_4RgoGnA
+
+### Obter todas pessoas
+GET {{URL}}/pessoa
+Authorization: Bearer {{token}}
+
+
+### Obter todas pessoas
+GET {{URL}}/pessoa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6ImZmYzlmMjY5LTRkMGUtNGZkZC05YWVmLTIxNzBmZjQxNGQ1OCIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEzOTUyMTMsImV4cCI6MTcwMTM5ODgxMywiaXNzIjoiVVRGUFIifQ.Tc3K37aR8TueXRMBmj69iTfvswcaswAzxdv4cAAfhdw
+
+### Obter todas pessoas
+GET {{URL}}/pessoa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6ImEzMDAwZTQwLTJlYWUtNGVkYy05ZTNkLWZmMDdiMDEzMjU2OSIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEyMDkwODQsImV4cCI6MTcwMTIxMjY4NCwiaXNzIjoiVVRGUFIifQ.JSQoh0M5x_NNQxe9xk-ZHIS8P_c6-NQsiQ9CRQw_GZc
+
+### obtem todas as pessoas
+GET {{URL}}/pacotes
+
+### cadastra uma pessoa
+POST {{URL}}/pessoa
+Content-Type: application/json
+
+{
+    "nome": "admiIn",
+    "email": "admiIn@admiIn.com",
+    "password": "admin",
+    "nascimento": "2022-10-31T09:00:00Z",
+    "perfil": "AGENCIA_DE_VIAGENS"
+}
+
+###
+GET {{URL}}/pessoa/email/admiIn@admiIn.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjUxZGUxMjMyLTkzNjgtNDM1Ni1iZTVhLTEwNDI4NGYzOGQ1NiIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEyNzc1MzIsImV4cCI6MTcwMTI4MTEzMiwiaXNzIjoiVVRGUFIifQ.ENPSaalTc84jYHh6gms07r_DjpkIjZ_RVeO_4RgoGnA
+
+
+### get
+
+GET  {{URL}}/pacotes/b11dc12f-461c-4f27-b1dd-23353dd3521d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjVmM2MwOTZkLWJlYmUtNDBkZS04OTA2LTBmZWE4ZWZkYWUwNyIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDE0NjI1NTEsImV4cCI6MTcwMTQ2NjE1MSwiaXNzIjoiVVRGUFIifQ.nxn4ZphCNuH6e9a_IfO7jfXGkjyGKAt8IH2Ek3L7qj4
+Content-Type: application/json
+
+{
+    "estado": "INDISPONIVEL",
+
+}
+
+### get
+
+PUT {{URL}}/pacotes/b11dc12f-461c-4f27-b1dd-23353dd3521d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjVmM2MwOTZkLWJlYmUtNDBkZS04OTA2LTBmZWE4ZWZkYWUwNyIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDE0NjI1NTEsImV4cCI6MTcwMTQ2NjE1MSwiaXNzIjoiVVRGUFIifQ.nxn4ZphCNuH6e9a_IfO7jfXGkjyGKAt8IH2Ek3L7qj4
+Content-Type: application/json
+
+{
+    "estado": "DISPONIVEL"
+}
+
+### get
+
+GET {{URL}}/passeios
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjYxOTEwMjdhLTczYjMtNDk5NC05NmQyLTAyN2M1ZDI0NDJhZCIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEyMjc2MTMsImV4cCI6MTcwMTIzMTIxMywiaXNzIjoiVVRGUFIifQ.5RfbA-8sDCYl8XEZVYpgY4ia2sqVTS4QHuRh6oOhpRk
+
+### post
+POST {{URL}}/pacotes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjYxOTEwMjdhLTczYjMtNDk5NC05NmQyLTAyN2M1ZDI0NDJhZCIsInVzZXJuYW1lIjoiYWRtaUluQGFkbWlJbi5jb20iLCJpYXQiOjE3MDEyMjc2MTMsImV4cCI6MTcwMTIzMTIxMywiaXNzIjoiVVRGUFIifQ.5RfbA-8sDCYl8XEZVYpgY4ia2sqVTS4QHuRh6oOhpRk
+Content-Type: application/json
+
+{
+"nome": "123123",
+  "preco": 123,
+  "username": "asdasd",
+  "tourIds": [
+    "aa86be4b-d03d-450a-8eca-848e38e2b9df"
+  ]
+}
+
+### post
+POST {{URL}}/auth
+Content-Type: application/json
+
+{
+    "username": "username",
+    "password": "1234"
+}
+
+### post
+POST {{URL}}/auth
+Content-Type: application/json
+
+{
+    "username": "abcde@abcde.com",
+    "password": "abcde"
+}
+
+
+
+
+### Obter uma pessoa pelo ID
+GET {{URL}}/70572e7b-0db0-4b20-8fd3-6c74ef4c1706
+Authorization: {{token}}
+
+### Criar uma pessoa
+POST {{URL}}
+Content-Type: application/json
+
+{
+    "name": "Juca",
+    "email": "juca@gmail.com",
+    "password": "1234",
+    "birth": "2000-05-05"
+}
+
+### Atualizar uma pessoa
+PUT {{URL}}/1520a44d-363e-4e31-b08b-2090dd395d0b
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name": "Marcelo",
+    "email": "mar@gmail.com",
+    "username": "mar",
+    "password": "1234",
+    "birth": "2000-05-06"
+}
+
+
+### Deletar uma pessoa
+DELETE {{URL}}/85bd872e-9017-4c5e-a218-446352253490
+Authorization: {{token}}
