@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . .
 RUN ls
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://db-postgres:5555/db_api
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://db-postgres:5432/db_api
 
 
 RUN chmod +x gradlew
